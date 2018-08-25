@@ -177,11 +177,11 @@ main{
     color: set-text-color($primary-color);
 }
 
-.button-light{
+/*.button-light{
     @extend.button;
     background: lighten($primary-color, 50);
     color: set-text-color(lighten($primary-color, 50));
-}
+}*/
 
 #main-footer{
     text-align: center;

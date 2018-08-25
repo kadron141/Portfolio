@@ -209,12 +209,12 @@ main {
       .boxes div:hover span {
         color: #000; }
 
-.button, .button-dark, .button-light {
+.button, .button-dark {
   display: block;
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem; }
-  .button:hover, .button-dark:hover, .button-light:hover {
+  .button:hover, .button-dark:hover {
     background: #eece1a;
     color: #000; }
 
@@ -222,10 +222,11 @@ main {
   background: black;
   color: #fff; }
 
-.button-light {
-  background: #c4c4c4;
-  color: #000; }
-
+/*.button-light{
+    @extend.button;
+    background: lighten($primary-color, 50);
+    color: set-text-color(lighten($primary-color, 50));
+}*/
 #main-footer {
   text-align: center;
   padding: 1rem;
@@ -280,6 +281,9 @@ main {
       margin-top: 10vh; }
     main .large-heading {
       margin-top: 1rem;
-      font-size: 5rem; }
+      font-size: 3rem; }
+    main .small-heading {
+      margin-top: 1rem;
+      font-size: 1rem; }
   .projects {
     grid-template-columns: 1fr; } }
