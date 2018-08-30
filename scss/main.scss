@@ -16,6 +16,28 @@ body{
     line-height: 1.5;
 }
 
+.language{
+
+    margin: 1rem;
+
+    a{
+        display: inline-block;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        padding: 0.6rem;
+        margin: 0.7rem;
+        text-decoration: none;
+        border: 0.1rem solid set-text-color($primary-color);
+        border-radius: 80%;
+        @include easeOut;
+        &:hover{
+            border: 0.1rem solid $secondary-color;
+            color: $secondary-color;
+        }
+    }
+}
+
 //heading
 h1, h2, h3 {
     margin: 0;
