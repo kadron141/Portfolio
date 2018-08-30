@@ -223,6 +223,8 @@ main {
       margin: 4rem;
       background: #eece1a;
       color: #000; }
+      .boxes div:hover a {
+        color: #000; }
       .boxes div:hover span {
         color: #000; }
 
