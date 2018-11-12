@@ -228,6 +228,9 @@ main {
       .boxes div:hover span {
         color: #000; }
 
+.job h3 > a {
+  text-decoration: underline; }
+
 .button, .button-dark {
   display: block;
   padding: 0.5rem 1rem;

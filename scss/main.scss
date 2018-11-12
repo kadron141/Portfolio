@@ -183,6 +183,12 @@ main{
     }
 }
 
+.job{
+    h3 > a{
+        text-decoration: underline;
+    }
+}
+
 //Button-styles
 .button{
     display: block;
