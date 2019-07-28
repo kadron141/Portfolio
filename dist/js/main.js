@@ -10,6 +10,7 @@ const navItems = document.querySelectorAll('.nav-item')
 let showMenu = false;
 
 menuButton.addEventListener('click', toggleMenu)
+navItems.forEach(item => item.addEventListener('click', toggleMenu))
 
 function toggleMenu(){
     if (!showMenu){

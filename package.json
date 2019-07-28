@@ -1,16 +1,21 @@
 {
-  "name": "portfolio",
-  "version": "1.0.0",
-  "description": "responsive portfolio",
-  "main": "index.js",
-  "homepage": "https://kadron141.github.io/Portfolio",
-  "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css --recursive"
-  },
-  "author": "Yan",
-  "license": "MIT",
-  "dependencies": {
-    "gh-pages": "^1.2.0",
-    "node-sass": "^4.9.3"
-  }
+	"name": "portfolio",
+	"version": "1.0.0",
+	"description": "responsive portfolio",
+	"main": "index.js",
+	"homepage": "https://kadron141.github.io/Portfolio",
+	"scripts": {
+		"sass": "node-sass -w scss/ -o dist/css --recursive",
+		"prettier:refactor": "prettier --config ./.prettierrc --write \"/**/*{.ts,.js,.json,.css,.scss}\"",
+		"sass-lint:check": "sass-lint ./scss/**/*.scss -v -q"
+	},
+	"author": "Yan",
+	"license": "MIT",
+	"dependencies": {
+		"node-sass": "^4.9.3"
+	},
+	"devDependencies": {
+		"prettier": "^1.18.2",
+		"sass-lint": "^1.13.1"
+	}
 }
