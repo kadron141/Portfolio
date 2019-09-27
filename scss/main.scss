@@ -65,6 +65,10 @@ a.gradient-link {
 	border-bottom: 1px solid transparent;
 	border-image: $gradient-color 50 round;
 	border-top: 0;
+
+	&.bsuir:hover {
+		cursor: not-allowed;
+	}
 }
 
 header {
