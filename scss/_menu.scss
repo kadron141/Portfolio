@@ -40,7 +40,6 @@
 	position: fixed;
 	top: 0;
 	width: 100%;
-	opacity: 0.9;
 	visibility: hidden;
 
 	&.show {
@@ -88,7 +87,7 @@
 			height: 315px;
 			background: url('../img/portrait.jpg');
 			border-radius: 50%;
-			border: solid 3px $secondary-color;
+			border: orange 3px solid;
 		}
 	}
 
@@ -102,7 +101,7 @@
 		}
 
 		&.current > a {
-			color: $secondary-color;
+			color: $gradient-color;
 		}
 	}
 
@@ -118,7 +117,9 @@
 		@include easeOut;
 
 		&:hover {
-			color: $secondary-color;
+			background: $gradient-color;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
 		}
 	}
 }

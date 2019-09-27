@@ -1,239 +1,204 @@
 @import 'config';
 @import 'menu';
 
+* {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	&::selection {
+		background: #ffcf9e;
+	}
 
-*{
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+	&::-moz-selection {
+		background: #ffcf9e;
+	}
 }
 
-body{
-    @include background;
-    background: $primary-color;
-    color: set-text-color($primary-color);
-    margin: 0;
-    height: 100vh;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.5;
+body {
+	@include background;
+	background: $primary-color;
+	color: set-text-color($primary-color);
+	margin: 0;
+	height: 100vh;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	line-height: 1.5;
 }
 
 .container {
-    height: 100%;
-    width: 100%;
-    overflow-y: scroll; 
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
+	height: 100%;
+	width: 100%;
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+	scroll-snap-type: y mandatory;
 }
 
-section{
-    height: 100vh;
-    scroll-snap-align: center;
-}
-
-.language{
-
-    margin: 1rem;
-
-    a{
-        display: inline-block;
-        width: 3rem;
-        height: 3rem;
-        text-align: center;
-        padding: 0.6rem;
-        margin: 0.7rem;
-        text-decoration: none;
-        border: 0.1rem solid set-text-color($primary-color);
-        border-radius: 80%;
-        @include easeOut;
-        &:hover{
-            border: 0.1rem solid $secondary-color;
-            color: $secondary-color;
-        }
-    }
+section {
+	height: 100vh;
+	scroll-snap-align: center;
 }
 
 //heading
-h1, h2, h3 {
-    margin: 0;
-    font-weight: 400;
+h1,
+h2,
+h3 {
+	margin: 0;
+	font-weight: 400;
 
-    &.large-heading{
-        font-size: 6rem;
-    }
+	&.large-heading {
+		font-size: 6rem;
+	}
 
-    &.small-heading{
-        margin-bottom: 2rem;
-        padding: 0.2rem 1rem;
-        background: rgba(lighten($primary-color, 2), 0.5);
-    }
+	&.small-heading {
+		margin-bottom: 2rem;
+		padding: 0.2rem 1rem;
+		background: rgba(lighten($primary-color, 2), 0.5);
+		border-radius: 1rem;
+	}
 }
 
-a{
-    color: #fff;
-    text-decoration: none;
+a {
+	color: #fff;
+	text-decoration: none;
 }
 
-header{
-    position: fixed;
-    z-index: 2;
-    width: 100%;
+a.gradient-link {
+	background: $gradient-color;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	border-bottom: 1px solid transparent;
+	border-image: $gradient-color 50 round;
 }
 
-.text-secondary{
-    color: $secondary-color;
+header {
+	position: fixed;
+	z-index: 2;
+	width: 100%;
 }
 
-main{
-    padding: 4rem;
-    //height: 100%;
-    min-height: calc(100vh - 60px);
-
-    .icons{
-        margin-top: 1rem;
-
-        a{
-            padding: 0.4rem;
-            color: set-text-color($primary-color);
-            &:hover{
-                color: $secondary-color;
-                @include easeOut;
-            }
-        }
-    }
-
-    &#home{
-        overflow: hidden;
-        h1{
-            margin-top: 20vh;
-        }
-    }
+.text-secondary {
+	background: $gradient-color;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
-.about-info{
-    display: grid;
-    grid-gap: 30px;
-    grid-template-areas: 
-    'bioimage bio bio'
-    'job1 job2 job3';
-    grid-template-columns: repeat(3, 1fr);
-    
-    .bio-image{
-        grid-area: bioimage;
-        margin: auto;
-        width: 315px;
-        height: 315px;
-        border-radius: 50%;
-        border: $secondary-color 3px solid;
-    }
+main {
+	padding: 4rem;
+	//height: 100%;
+	min-height: calc(100vh - 60px);
 
-    .bio{
-        grid-area: bio;
-        font-size: 1.5rem;
-    }
+	.icons {
+		margin-top: 1rem;
 
-    .job-1{
-        grid-area: job1;
-    }
-    .job-2{
-        grid-area: job2;
-    }
-    .job-3{
-        grid-area: job3;
-    }
+		a {
+			padding: 0.4rem;
+			color: set-text-color($primary-color);
+			&:hover {
+				color: orange;
+				@include easeOut;
+			}
+		}
+	}
 
-    .job{
-        background: lighten($primary-color, 5);
-        padding: 0.5rem;
-        border-bottom: $secondary-color 5px solid;
-    }
+	&#home {
+		overflow: hidden;
+		h1 {
+			margin-top: 20vh;
+		}
+	}
 }
 
-//Work/Projects
-.projects{
-    display: grid;  
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 0.7rem;
+.about-info {
+	display: grid;
+	grid-gap: 30px;
+	grid-template-areas:
+		'bioimage bio bio'
+		'job1 job2 job3';
+	grid-template-columns: repeat(3, 1fr);
 
-    img{
-        width: 100%;
-        border: 3px #fff solid;
+	.bio-image {
+		grid-area: bioimage;
+		margin: auto;
+		width: 315px;
+		height: 315px;
+		background: url('../img/portrait_bio.jpg');
+		border-radius: 50%;
+		border: orange 3px solid;
+	}
 
-        &:hover{
-            opacity: 0.5;
-            border-color: $secondary-color;
-            @include easeOut;
-        }
-    }
+	.bio {
+		grid-area: bio;
+		font-size: 1.5rem;
+	}
+
+	.job-1 {
+		grid-area: job1;
+	}
+	.job-2 {
+		grid-area: job2;
+	}
+	.job-3 {
+		grid-area: job3;
+	}
+
+	.job {
+		background: lighten($primary-color, 5);
+		padding: 0.5rem;
+		border-bottom: 3px solid transparent;
+		border-image: $gradient-color 50 round;
+		border-image-repeat: stretch;
+	}
 }
 
 //Contact page
-.boxes{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+.boxes {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-box-pack: space-evenly;
+	-ms-flex-pack: space-evenly;
+	justify-content: space-evenly;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
 
+	div {
+		font-size: 2rem;
+		border: 3px set-text-color($primary-color) solid;
+		padding: 1.5rem 2.5rem;
+		margin: 3rem;
 
-    div{
-        font-size: 2rem;
-        border: 3px set-text-color($primary-color) solid;
-        padding: 1.5rem 2.5rem;
-        margin: 3rem;
+		@include easeOut;
 
-        @include easeOut;
-
-        &:hover{
-            padding: 0.5rem 1.5rem;
-            margin: 4rem;
-            background: $secondary-color;
-            color: set-text-color($secondary-color);
-            a{
-                color: set-text-color($secondary-color);
-            }
-            span{
-                color: set-text-color($secondary-color);
-            }
-        }
-    }
+		&:hover {
+			padding: 0.5rem 1.5rem;
+			margin: 4rem;
+			background: $gradient-color;
+			color: set-text-color(orange);
+			a {
+				color: set-text-color(orange);
+			}
+			span {
+				background: set-text-color(orange);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+		}
+	}
 }
 
-.job{
-    h3 > a{
-        text-decoration: underline;
-    }
+.job {
+	h3 > a {
+		text-decoration: underline;
+	}
 }
 
-//Button-styles
-.button{
-    display: block;
-    padding: 0.5rem 1rem;
-    border: 0;
-    margin-bottom: 0.3rem;
-    &:hover{
-        background: $secondary-color;
-        color: set-text-color($secondary-color);
-    }
-}
-
-.button-dark{
-    @extend.button;
-    background: darken($primary-color, 50);
-    color: set-text-color($primary-color);
-}
-
-#main-footer{
-    text-align: center;
-    padding: 1rem;
-    background: darken($primary-color, 10);
-    color: set-text-color($primary-color);
-    height: 60px;
+#main-footer {
+	text-align: center;
+	padding: 1rem;
+	background: darken($primary-color, 10);
+	color: set-text-color($primary-color);
+	height: 60px;
 }
 
 @import 'mobile';
