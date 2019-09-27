@@ -66,6 +66,7 @@ a.gradient-link {
 	-webkit-text-fill-color: transparent;
 	border-bottom: 1px solid transparent;
 	border-image: $gradient-color 50 round;
+	border-top: 0;
 }
 
 header {
