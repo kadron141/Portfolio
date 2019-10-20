@@ -157,8 +157,6 @@ a.gradient-link {
   border-bottom: 1px solid transparent;
   border-image: linear-gradient(90deg, #020024 0%, #00d4ff 0%, #ff8400 0%, #cd8d32 51%) 50 round;
   border-top: 0; }
-  a.gradient-link.bsuir:hover {
-    cursor: not-allowed; }
 
 header {
   position: fixed;
