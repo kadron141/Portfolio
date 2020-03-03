@@ -1,5 +1,4 @@
 @import 'config';
-@import 'menu';
 
 * {
 	-webkit-box-sizing: border-box;
@@ -67,21 +66,14 @@ a.gradient-link {
 	border-top: 0;
 }
 
-header {
-	position: fixed;
-	z-index: 2;
-	width: 100%;
-}
-
 .text-secondary {
 	background: $gradient-color;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
 
-main {
+.screen-content {
 	padding: 4rem;
-	//height: 100%;
 	min-height: calc(100vh - 60px);
 
 	.icons {
@@ -97,12 +89,11 @@ main {
 		}
 	}
 
-	&#home {
-		overflow: hidden;
+	&.home {
 		h1 {
 			margin-top: 20vh;
-		}
-	}
+		}	
+	}	
 }
 
 .about-info {
